@@ -1,5 +1,5 @@
 {
-  "name": "rest-server",
+  "name": "Mongo-crud",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
