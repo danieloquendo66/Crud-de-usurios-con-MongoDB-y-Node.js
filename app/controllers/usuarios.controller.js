@@ -21,7 +21,11 @@ const usuariosGet = async (req = request, res = response) => {
 
 //crear usuarios
 const usuariosPos = async (req = request, res = response) => {
-  const { nombre, correo, password, role } = req.body;
+  let { nombre, correo, password, role } = req.body;
+
+  if (!role) {
+    role = "USER_ROLE";
+  }
   const usuario = new Usuario({ nombre, correo, password, role });
 
   const salt = bcrypt.genSaltSync(10);

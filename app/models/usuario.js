@@ -29,7 +29,7 @@ const UsuarioSchema = Schema({
   },
   google: {
     type: Boolean,
-    default: true,
+    default: false,
   },
 });
 

@@ -40,7 +40,7 @@ router.post(
     ).isLength({ min: 6 }),
     check("correo").custom(existeEmail),
 
-    check("role").custom(esRoleValido),
+    check("role", "El rol es obligatorio").custom(esRoleValido),
     validarCampos,
   ],
   usuariosPos
